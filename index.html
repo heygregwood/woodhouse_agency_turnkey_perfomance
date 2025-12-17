@@ -90,6 +90,7 @@
         <li><span class="text-slate-300 font-medium">Leads</span> — Messages received through social media (potential customer inquiries)</li>
         <li><span class="text-slate-300 font-medium">% Change</span> — Compares current Woodhouse-managed performance to pre-Woodhouse baseline</li>
       </ul>
+      <p class="text-xs text-slate-500 mt-3">*Elite A/C pre-partnership metrics include memorial posts honoring Big John, whose passing sparked an extraordinary community response.</p>
     </section>
 
     <footer class="px-8 py-8 border-t border-slate-800 text-center">
@@ -136,10 +137,11 @@
     document.getElementById('total-impressions').textContent = (totalImpressions / 1000).toFixed(0) + 'K+';
     document.getElementById('total-engagements').textContent = totalEngagements.toLocaleString();
 
-    function pctChange(before, after) {
+    function pctChange(before, after, addAsterisk = false) {
       if (before === 0) return after > 0 ? '+∞' : '—';
       const change = ((after - before) / before) * 100;
-      return change >= 0 ? `+${change.toFixed(0)}%` : `${change.toFixed(0)}%`;
+      const formatted = change >= 0 ? `+${change.toFixed(0)}%` : `${change.toFixed(0)}%`;
+      return addAsterisk ? formatted + '*' : formatted;
     }
 
     function pctClass(before, after) {
@@ -149,7 +151,8 @@
 
     const table = document.getElementById('dealer-table');
     dealers.forEach(dealer => {
-      const impChange = pctChange(dealer.before.impressions, dealer.after.impressions);
+      const isElite = dealer.slug === 'elite-ac';
+      const impChange = pctChange(dealer.before.impressions, dealer.after.impressions, isElite);
       const leadsDisplay = dealer.after.messages !== null ? dealer.after.messages.toLocaleString() : '—';
       const row = document.createElement('tr');
       row.className = 'dealer-row border-t border-slate-700 cursor-pointer';
