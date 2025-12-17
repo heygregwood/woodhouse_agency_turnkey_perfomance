@@ -1,0 +1,257 @@
+{
+  "profile": "Kennedy's Heating & Air Conditioning",
+  "slug": "kennedys",
+  "first_post": "2023-06-18",
+  "monthly": [
+    {
+      "month": "2022-06",
+      "posts": 2,
+      "impressions": 1695,
+      "engagements": 101
+    },
+    {
+      "month": "2022-07",
+      "posts": 3,
+      "impressions": 684,
+      "engagements": 17
+    },
+    {
+      "month": "2022-09",
+      "posts": 2,
+      "impressions": 1678,
+      "engagements": 105
+    },
+    {
+      "month": "2022-11",
+      "posts": 3,
+      "impressions": 764,
+      "engagements": 15
+    },
+    {
+      "month": "2023-01",
+      "posts": 1,
+      "impressions": 257,
+      "engagements": 19
+    },
+    {
+      "month": "2023-02",
+      "posts": 2,
+      "impressions": 3187,
+      "engagements": 163
+    },
+    {
+      "month": "2023-03",
+      "posts": 2,
+      "impressions": 814,
+      "engagements": 54
+    },
+    {
+      "month": "2023-04",
+      "posts": 1,
+      "impressions": 1411,
+      "engagements": 89
+    },
+    {
+      "month": "2023-05",
+      "posts": 2,
+      "impressions": 405,
+      "engagements": 12
+    },
+    {
+      "month": "2023-06",
+      "posts": 10,
+      "impressions": 3547,
+      "engagements": 816
+    },
+    {
+      "month": "2023-07",
+      "posts": 26,
+      "impressions": 3722,
+      "engagements": 703
+    },
+    {
+      "month": "2023-08",
+      "posts": 13,
+      "impressions": 915,
+      "engagements": 84
+    },
+    {
+      "month": "2023-09",
+      "posts": 12,
+      "impressions": 894,
+      "engagements": 93
+    },
+    {
+      "month": "2023-10",
+      "posts": 14,
+      "impressions": 221,
+      "engagements": 65
+    },
+    {
+      "month": "2023-11",
+      "posts": 17,
+      "impressions": 1181,
+      "engagements": 114
+    },
+    {
+      "month": "2023-12",
+      "posts": 13,
+      "impressions": 3723,
+      "engagements": 218
+    },
+    {
+      "month": "2024-01",
+      "posts": 13,
+      "impressions": 641,
+      "engagements": 57
+    },
+    {
+      "month": "2024-02",
+      "posts": 10,
+      "impressions": 738,
+      "engagements": 40
+    },
+    {
+      "month": "2024-03",
+      "posts": 12,
+      "impressions": 342,
+      "engagements": 12
+    },
+    {
+      "month": "2024-04",
+      "posts": 12,
+      "impressions": 466,
+      "engagements": 15
+    },
+    {
+      "month": "2024-05",
+      "posts": 13,
+      "impressions": 1477,
+      "engagements": 144
+    },
+    {
+      "month": "2024-06",
+      "posts": 17,
+      "impressions": 453,
+      "engagements": 43
+    },
+    {
+      "month": "2024-07",
+      "posts": 16,
+      "impressions": 4189,
+      "engagements": 485
+    },
+    {
+      "month": "2024-08",
+      "posts": 15,
+      "impressions": 875,
+      "engagements": 153
+    },
+    {
+      "month": "2024-09",
+      "posts": 9,
+      "impressions": 155,
+      "engagements": 20
+    },
+    {
+      "month": "2024-10",
+      "posts": 11,
+      "impressions": 303,
+      "engagements": 34
+    },
+    {
+      "month": "2024-11",
+      "posts": 7,
+      "impressions": 149,
+      "engagements": 65
+    },
+    {
+      "month": "2024-12",
+      "posts": 11,
+      "impressions": 0,
+      "engagements": 56
+    },
+    {
+      "month": "2025-01",
+      "posts": 12,
+      "impressions": 994,
+      "engagements": 20
+    },
+    {
+      "month": "2025-02",
+      "posts": 15,
+      "impressions": 1561,
+      "engagements": 36
+    },
+    {
+      "month": "2025-03",
+      "posts": 10,
+      "impressions": 1277,
+      "engagements": 33
+    },
+    {
+      "month": "2025-04",
+      "posts": 11,
+      "impressions": 1427,
+      "engagements": 42
+    },
+    {
+      "month": "2025-05",
+      "posts": 10,
+      "impressions": 1192,
+      "engagements": 42
+    },
+    {
+      "month": "2025-06",
+      "posts": 12,
+      "impressions": 1236,
+      "engagements": 25
+    },
+    {
+      "month": "2025-07",
+      "posts": 9,
+      "impressions": 967,
+      "engagements": 32
+    },
+    {
+      "month": "2025-08",
+      "posts": 11,
+      "impressions": 905,
+      "engagements": 14
+    },
+    {
+      "month": "2025-09",
+      "posts": 10,
+      "impressions": 708,
+      "engagements": 17
+    },
+    {
+      "month": "2025-10",
+      "posts": 15,
+      "impressions": 1370,
+      "engagements": 49
+    },
+    {
+      "month": "2025-11",
+      "posts": 13,
+      "impressions": 1035,
+      "engagements": 37
+    },
+    {
+      "month": "2025-12",
+      "posts": 7,
+      "impressions": 4647,
+      "engagements": 595
+    }
+  ],
+  "before": {
+    "posts": 22,
+    "impressions": 13296,
+    "engagements": 1227
+  },
+  "after": {
+    "posts": 382,
+    "impressions": 38909,
+    "engagements": 3507
+  }
+}

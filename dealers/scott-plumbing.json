@@ -1,0 +1,227 @@
+{
+  "profile": "Scott Plumbing & Heating Co Inc",
+  "slug": "scott-plumbing",
+  "first_post": "2023-05-25",
+  "monthly": [
+    {
+      "month": "2022-12",
+      "posts": 1,
+      "impressions": 126,
+      "engagements": 8
+    },
+    {
+      "month": "2023-02",
+      "posts": 5,
+      "impressions": 2394,
+      "engagements": 257
+    },
+    {
+      "month": "2023-03",
+      "posts": 1,
+      "impressions": 1373,
+      "engagements": 101
+    },
+    {
+      "month": "2023-05",
+      "posts": 3,
+      "impressions": 1101,
+      "engagements": 110
+    },
+    {
+      "month": "2023-06",
+      "posts": 12,
+      "impressions": 1606,
+      "engagements": 567
+    },
+    {
+      "month": "2023-07",
+      "posts": 9,
+      "impressions": 578,
+      "engagements": 61
+    },
+    {
+      "month": "2023-08",
+      "posts": 12,
+      "impressions": 866,
+      "engagements": 99
+    },
+    {
+      "month": "2023-09",
+      "posts": 12,
+      "impressions": 154,
+      "engagements": 19
+    },
+    {
+      "month": "2023-10",
+      "posts": 11,
+      "impressions": 179,
+      "engagements": 78
+    },
+    {
+      "month": "2023-11",
+      "posts": 11,
+      "impressions": 593,
+      "engagements": 50
+    },
+    {
+      "month": "2023-12",
+      "posts": 12,
+      "impressions": 746,
+      "engagements": 63
+    },
+    {
+      "month": "2024-01",
+      "posts": 13,
+      "impressions": 154,
+      "engagements": 19
+    },
+    {
+      "month": "2024-02",
+      "posts": 9,
+      "impressions": 140,
+      "engagements": 5
+    },
+    {
+      "month": "2024-03",
+      "posts": 13,
+      "impressions": 772,
+      "engagements": 54
+    },
+    {
+      "month": "2024-04",
+      "posts": 11,
+      "impressions": 486,
+      "engagements": 9
+    },
+    {
+      "month": "2024-05",
+      "posts": 11,
+      "impressions": 1285,
+      "engagements": 133
+    },
+    {
+      "month": "2024-06",
+      "posts": 14,
+      "impressions": 1645,
+      "engagements": 122
+    },
+    {
+      "month": "2024-07",
+      "posts": 15,
+      "impressions": 2205,
+      "engagements": 355
+    },
+    {
+      "month": "2024-08",
+      "posts": 13,
+      "impressions": 373,
+      "engagements": 52
+    },
+    {
+      "month": "2024-09",
+      "posts": 10,
+      "impressions": 1327,
+      "engagements": 130
+    },
+    {
+      "month": "2024-10",
+      "posts": 14,
+      "impressions": 1128,
+      "engagements": 136
+    },
+    {
+      "month": "2024-11",
+      "posts": 9,
+      "impressions": 1320,
+      "engagements": 155
+    },
+    {
+      "month": "2024-12",
+      "posts": 18,
+      "impressions": 1009,
+      "engagements": 101
+    },
+    {
+      "month": "2025-01",
+      "posts": 12,
+      "impressions": 2085,
+      "engagements": 74
+    },
+    {
+      "month": "2025-02",
+      "posts": 12,
+      "impressions": 2277,
+      "engagements": 40
+    },
+    {
+      "month": "2025-03",
+      "posts": 10,
+      "impressions": 744,
+      "engagements": 3
+    },
+    {
+      "month": "2025-04",
+      "posts": 12,
+      "impressions": 2004,
+      "engagements": 56
+    },
+    {
+      "month": "2025-05",
+      "posts": 13,
+      "impressions": 1756,
+      "engagements": 116
+    },
+    {
+      "month": "2025-06",
+      "posts": 11,
+      "impressions": 1597,
+      "engagements": 40
+    },
+    {
+      "month": "2025-07",
+      "posts": 10,
+      "impressions": 2190,
+      "engagements": 114
+    },
+    {
+      "month": "2025-08",
+      "posts": 13,
+      "impressions": 1299,
+      "engagements": 31
+    },
+    {
+      "month": "2025-09",
+      "posts": 12,
+      "impressions": 1188,
+      "engagements": 41
+    },
+    {
+      "month": "2025-10",
+      "posts": 8,
+      "impressions": 493,
+      "engagements": 4
+    },
+    {
+      "month": "2025-11",
+      "posts": 15,
+      "impressions": 1732,
+      "engagements": 58
+    },
+    {
+      "month": "2025-12",
+      "posts": 4,
+      "impressions": 172,
+      "engagements": 3
+    }
+  ],
+  "before": {
+    "posts": 8,
+    "impressions": 4825,
+    "engagements": 470
+  },
+  "after": {
+    "posts": 363,
+    "impressions": 34272,
+    "engagements": 2794
+  }
+}

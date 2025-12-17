@@ -1,0 +1,191 @@
+{
+  "profile": "Metro Maintenance",
+  "slug": "metro",
+  "first_post": "2023-08-12",
+  "monthly": [
+    {
+      "month": "2023-08",
+      "posts": 7,
+      "impressions": 200,
+      "engagements": 5
+    },
+    {
+      "month": "2023-09",
+      "posts": 12,
+      "impressions": 477,
+      "engagements": 14
+    },
+    {
+      "month": "2023-10",
+      "posts": 14,
+      "impressions": 165,
+      "engagements": 25
+    },
+    {
+      "month": "2023-11",
+      "posts": 10,
+      "impressions": 65,
+      "engagements": 7
+    },
+    {
+      "month": "2023-12",
+      "posts": 11,
+      "impressions": 112,
+      "engagements": 13
+    },
+    {
+      "month": "2024-01",
+      "posts": 13,
+      "impressions": 89,
+      "engagements": 6
+    },
+    {
+      "month": "2024-02",
+      "posts": 9,
+      "impressions": 60,
+      "engagements": 1
+    },
+    {
+      "month": "2024-03",
+      "posts": 11,
+      "impressions": 132,
+      "engagements": 14
+    },
+    {
+      "month": "2024-04",
+      "posts": 11,
+      "impressions": 122,
+      "engagements": 16
+    },
+    {
+      "month": "2024-05",
+      "posts": 8,
+      "impressions": 27,
+      "engagements": 25
+    },
+    {
+      "month": "2024-06",
+      "posts": 21,
+      "impressions": 236,
+      "engagements": 37
+    },
+    {
+      "month": "2024-07",
+      "posts": 23,
+      "impressions": 270,
+      "engagements": 24
+    },
+    {
+      "month": "2024-08",
+      "posts": 21,
+      "impressions": 849,
+      "engagements": 76
+    },
+    {
+      "month": "2024-09",
+      "posts": 13,
+      "impressions": 1330,
+      "engagements": 149
+    },
+    {
+      "month": "2024-10",
+      "posts": 19,
+      "impressions": 2594,
+      "engagements": 658
+    },
+    {
+      "month": "2024-11",
+      "posts": 12,
+      "impressions": 2003,
+      "engagements": 682
+    },
+    {
+      "month": "2024-12",
+      "posts": 20,
+      "impressions": 978,
+      "engagements": 256
+    },
+    {
+      "month": "2025-01",
+      "posts": 31,
+      "impressions": 5032,
+      "engagements": 275
+    },
+    {
+      "month": "2025-02",
+      "posts": 26,
+      "impressions": 1357,
+      "engagements": 153
+    },
+    {
+      "month": "2025-03",
+      "posts": 23,
+      "impressions": 816,
+      "engagements": 57
+    },
+    {
+      "month": "2025-04",
+      "posts": 26,
+      "impressions": 857,
+      "engagements": 40
+    },
+    {
+      "month": "2025-05",
+      "posts": 18,
+      "impressions": 566,
+      "engagements": 27
+    },
+    {
+      "month": "2025-06",
+      "posts": 22,
+      "impressions": 545,
+      "engagements": 37
+    },
+    {
+      "month": "2025-07",
+      "posts": 26,
+      "impressions": 830,
+      "engagements": 66
+    },
+    {
+      "month": "2025-08",
+      "posts": 16,
+      "impressions": 484,
+      "engagements": 19
+    },
+    {
+      "month": "2025-09",
+      "posts": 22,
+      "impressions": 522,
+      "engagements": 41
+    },
+    {
+      "month": "2025-10",
+      "posts": 19,
+      "impressions": 416,
+      "engagements": 26
+    },
+    {
+      "month": "2025-11",
+      "posts": 18,
+      "impressions": 385,
+      "engagements": 24
+    },
+    {
+      "month": "2025-12",
+      "posts": 8,
+      "impressions": 195,
+      "engagements": 21
+    }
+  ],
+  "before": {
+    "posts": 0,
+    "impressions": 0,
+    "engagements": 0
+  },
+  "after": {
+    "posts": 490,
+    "impressions": 21714,
+    "engagements": 2794
+  }
+}

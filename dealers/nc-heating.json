@@ -1,0 +1,149 @@
+{
+  "profile": "NC Heating & Air - Your HVAC Friend",
+  "slug": "nc-heating",
+  "first_post": "2024-08-01",
+  "monthly": [
+    {
+      "month": "2023-09",
+      "posts": 2,
+      "impressions": 626,
+      "engagements": 5
+    },
+    {
+      "month": "2023-10",
+      "posts": 2,
+      "impressions": 449,
+      "engagements": 32
+    },
+    {
+      "month": "2023-12",
+      "posts": 4,
+      "impressions": 752,
+      "engagements": 28
+    },
+    {
+      "month": "2024-01",
+      "posts": 6,
+      "impressions": 1719,
+      "engagements": 178
+    },
+    {
+      "month": "2024-06",
+      "posts": 3,
+      "impressions": 2638,
+      "engagements": 406
+    },
+    {
+      "month": "2024-08",
+      "posts": 11,
+      "impressions": 44,
+      "engagements": 17
+    },
+    {
+      "month": "2024-09",
+      "posts": 9,
+      "impressions": 62,
+      "engagements": 1
+    },
+    {
+      "month": "2024-10",
+      "posts": 12,
+      "impressions": 25,
+      "engagements": 2
+    },
+    {
+      "month": "2024-11",
+      "posts": 7,
+      "impressions": 35,
+      "engagements": 6
+    },
+    {
+      "month": "2024-12",
+      "posts": 11,
+      "impressions": 0,
+      "engagements": 9
+    },
+    {
+      "month": "2025-01",
+      "posts": 10,
+      "impressions": 263,
+      "engagements": 4
+    },
+    {
+      "month": "2025-02",
+      "posts": 9,
+      "impressions": 263,
+      "engagements": 4
+    },
+    {
+      "month": "2025-03",
+      "posts": 10,
+      "impressions": 381,
+      "engagements": 4
+    },
+    {
+      "month": "2025-04",
+      "posts": 10,
+      "impressions": 463,
+      "engagements": 3
+    },
+    {
+      "month": "2025-05",
+      "posts": 10,
+      "impressions": 329,
+      "engagements": 3
+    },
+    {
+      "month": "2025-06",
+      "posts": 10,
+      "impressions": 466,
+      "engagements": 6
+    },
+    {
+      "month": "2025-07",
+      "posts": 8,
+      "impressions": 174,
+      "engagements": 3
+    },
+    {
+      "month": "2025-08",
+      "posts": 11,
+      "impressions": 209,
+      "engagements": 2
+    },
+    {
+      "month": "2025-09",
+      "posts": 10,
+      "impressions": 124,
+      "engagements": 0
+    },
+    {
+      "month": "2025-10",
+      "posts": 10,
+      "impressions": 321,
+      "engagements": 3
+    },
+    {
+      "month": "2025-11",
+      "posts": 9,
+      "impressions": 177,
+      "engagements": 4
+    },
+    {
+      "month": "2025-12",
+      "posts": 5,
+      "impressions": 66,
+      "engagements": 2
+    }
+  ],
+  "before": {
+    "posts": 17,
+    "impressions": 6184,
+    "engagements": 649
+  },
+  "after": {
+    "posts": 162,
+    "impressions": 3402,
+    "engagements": 73
+  }
+}

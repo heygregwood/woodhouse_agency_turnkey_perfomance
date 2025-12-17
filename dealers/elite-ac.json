@@ -1,0 +1,131 @@
+{
+  "profile": "Elite A/C Solutions",
+  "slug": "elite-ac",
+  "first_post": "2025-04-22",
+  "monthly": [
+    {
+      "month": "2024-05",
+      "posts": 2,
+      "impressions": 606,
+      "engagements": 51
+    },
+    {
+      "month": "2024-06",
+      "posts": 3,
+      "impressions": 676,
+      "engagements": 69
+    },
+    {
+      "month": "2024-07",
+      "posts": 10,
+      "impressions": 2141,
+      "engagements": 252
+    },
+    {
+      "month": "2024-08",
+      "posts": 6,
+      "impressions": 1235,
+      "engagements": 73
+    },
+    {
+      "month": "2024-09",
+      "posts": 7,
+      "impressions": 1783,
+      "engagements": 188
+    },
+    {
+      "month": "2024-10",
+      "posts": 12,
+      "impressions": 5143,
+      "engagements": 608
+    },
+    {
+      "month": "2024-11",
+      "posts": 7,
+      "impressions": 12858,
+      "engagements": 2678
+    },
+    {
+      "month": "2024-12",
+      "posts": 4,
+      "impressions": 559,
+      "engagements": 39
+    },
+    {
+      "month": "2025-02",
+      "posts": 14,
+      "impressions": 3868,
+      "engagements": 161
+    },
+    {
+      "month": "2025-03",
+      "posts": 3,
+      "impressions": 26857,
+      "engagements": 4585
+    },
+    {
+      "month": "2025-04",
+      "posts": 7,
+      "impressions": 3484,
+      "engagements": 495
+    },
+    {
+      "month": "2025-05",
+      "posts": 19,
+      "impressions": 3301,
+      "engagements": 404
+    },
+    {
+      "month": "2025-06",
+      "posts": 16,
+      "impressions": 3246,
+      "engagements": 199
+    },
+    {
+      "month": "2025-07",
+      "posts": 9,
+      "impressions": 1439,
+      "engagements": 49
+    },
+    {
+      "month": "2025-08",
+      "posts": 10,
+      "impressions": 808,
+      "engagements": 40
+    },
+    {
+      "month": "2025-09",
+      "posts": 11,
+      "impressions": 582,
+      "engagements": 10
+    },
+    {
+      "month": "2025-10",
+      "posts": 20,
+      "impressions": 7280,
+      "engagements": 938
+    },
+    {
+      "month": "2025-11",
+      "posts": 19,
+      "impressions": 11017,
+      "engagements": 917
+    },
+    {
+      "month": "2025-12",
+      "posts": 11,
+      "impressions": 2171,
+      "engagements": 161
+    }
+  ],
+  "before": {
+    "posts": 71,
+    "impressions": 57947,
+    "engagements": 9105
+  },
+  "after": {
+    "posts": 119,
+    "impressions": 31107,
+    "engagements": 2812
+  }
+}

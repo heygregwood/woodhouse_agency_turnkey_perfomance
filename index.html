@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ihrie Supply Dealer Performance | Woodhouse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --woodhouse-blue: #12ace2;
+      --woodhouse-dark-blue: #1e78ab;
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+    }
+    body { font-family: 'Work Sans', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #12ace2 0%, #1e78ab 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--bg-card) 0%, #0f172a 100%);
+      border-left: 4px solid var(--woodhouse-blue);
+    }
+    .dealer-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .dealer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(18, 172, 226, 0.15);
+    }
+    .positive { color: #22c55e; }
+    .negative { color: #ef4444; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen">
+  
+  <!-- Header -->
+  <header class="bg-slate-800/50 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
+      </div>
+      <div class="text-sm text-slate-400">
+        Data through December 15, 2025
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="gradient-text">Ihrie Supply</span> Dealer Performance
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+        Organic social media performance for 7 HVAC dealers managed by Woodhouse Turnkey Social Media
+      </p>
+      <p class="text-sm text-slate-500 mt-2">Excludes paid/boosted impressions</p>
+    </div>
+  </section>
+
+  <!-- Summary Stats -->
+  <section class="py-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="stat-card rounded-xl p-6">
+          <p class="text-slate-400 text-sm mb-1">Total Dealers</p>
+          <p class="text-3xl font-bold">7</p>
+        </div>
+        <div class="stat-card rounded-xl p-6">
+          <p class="text-slate-400 text-sm mb-1">Total Posts</p>
+          <p class="text-3xl font-bold" id="total-posts">-</p>
+        </div>
+        <div class="stat-card rounded-xl p-6">
+          <p class="text-slate-400 text-sm mb-1">Total Impressions</p>
+          <p class="text-3xl font-bold" id="total-impressions">-</p>
+        </div>
+        <div class="stat-card rounded-xl p-6">
+          <p class="text-slate-400 text-sm mb-1">Total Engagements</p>
+          <p class="text-3xl font-bold" id="total-engagements">-</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dealer Cards -->
+  <section class="py-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6">Dealer Performance</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="dealer-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 mt-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto text-center text-slate-500">
+      <p>Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
+      <p class="text-sm mt-2">Data sourced from Sprout Social Profile Performance Reports</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dealer data - ORGANIC ONLY (excludes paid/boosted impressions)
+    const dealers = [
+      {
+        "profile": "Airtech - Mechanical Services",
+        "slug": "airtech",
+        "first_post": "2023-04-01",
+        "before": {"posts": 44, "impressions": 2501, "engagements": 131},
+        "after": {"posts": 325, "impressions": 3271, "engagements": 133}
+      },
+      {
+        "profile": "Scott Plumbing & Heating Co Inc",
+        "slug": "scott-plumbing",
+        "first_post": "2023-05-25",
+        "before": {"posts": 8, "impressions": 4825, "engagements": 470},
+        "after": {"posts": 363, "impressions": 34272, "engagements": 2794}
+      },
+      {
+        "profile": "Kennedy's Heating & Air Conditioning",
+        "slug": "kennedys",
+        "first_post": "2023-06-18",
+        "before": {"posts": 22, "impressions": 13296, "engagements": 1227},
+        "after": {"posts": 382, "impressions": 38909, "engagements": 3507}
+      },
+      {
+        "profile": "Metro Maintenance",
+        "slug": "metro",
+        "first_post": "2023-08-12",
+        "before": {"posts": 0, "impressions": 0, "engagements": 0},
+        "after": {"posts": 490, "impressions": 21714, "engagements": 2794}
+      },
+      {
+        "profile": "Advanced Air Solutions Systems, Inc.",
+        "slug": "advanced-air",
+        "first_post": "2024-02-18",
+        "before": {"posts": 1, "impressions": 12, "engagements": 0},
+        "after": {"posts": 208, "impressions": 851, "engagements": 16}
+      },
+      {
+        "profile": "NC Heating & Air - Your HVAC Friend",
+        "slug": "nc-heating",
+        "first_post": "2024-08-01",
+        "before": {"posts": 17, "impressions": 6184, "engagements": 649},
+        "after": {"posts": 162, "impressions": 3402, "engagements": 73}
+      },
+      {
+        "profile": "Elite A/C Solutions",
+        "slug": "elite-ac",
+        "first_post": "2025-04-22",
+        "before": {"posts": 71, "impressions": 57947, "engagements": 9105},
+        "after": {"posts": 119, "impressions": 31107, "engagements": 2812}
+      }
+    ];
+
+    // Calculate totals
+    const totalPosts = dealers.reduce((sum, d) => sum + d.after.posts, 0);
+    const totalImpressions = dealers.reduce((sum, d) => sum + d.after.impressions, 0);
+    const totalEngagements = dealers.reduce((sum, d) => sum + d.after.engagements, 0);
+
+    document.getElementById('total-posts').textContent = totalPosts.toLocaleString();
+    document.getElementById('total-impressions').textContent = (totalImpressions / 1000000).toFixed(2) + 'M';
+    document.getElementById('total-engagements').textContent = totalEngagements.toLocaleString();
+
+    // Format percentage change
+    function pctChange(before, after) {
+      if (before === 0) return after > 0 ? '+∞' : '0%';
+      const change = ((after - before) / before) * 100;
+      const formatted = change >= 0 ? `+${change.toFixed(0)}%` : `${change.toFixed(0)}%`;
+      return formatted;
+    }
+
+    function pctClass(before, after) {
+      if (before === 0) return after > 0 ? 'positive' : '';
+      return after >= before ? 'positive' : 'negative';
+    }
+
+    // Render dealer cards
+    const grid = document.getElementById('dealer-grid');
+    dealers.forEach(dealer => {
+      const postChange = pctChange(dealer.before.posts, dealer.after.posts);
+      const impChange = pctChange(dealer.before.impressions, dealer.after.impressions);
+      const engChange = pctChange(dealer.before.engagements, dealer.after.engagements);
+      
+      const card = document.createElement('a');
+      card.href = `dealers/${dealer.slug}.html`;
+      card.className = 'dealer-card bg-slate-800 rounded-xl p-6 border border-slate-700 block';
+      card.innerHTML = `
+        <h3 class="font-semibold text-lg mb-1">${dealer.profile}</h3>
+        <p class="text-slate-400 text-sm mb-4">Partner since ${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</p>
+        
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p class="text-2xl font-bold">${dealer.after.posts}</p>
+            <p class="text-xs text-slate-400">Posts</p>
+            <p class="text-xs ${pctClass(dealer.before.posts, dealer.after.posts)}">${postChange}</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">${(dealer.after.impressions / 1000).toFixed(0)}K</p>
+            <p class="text-xs text-slate-400">Impressions</p>
+            <p class="text-xs ${pctClass(dealer.before.impressions, dealer.after.impressions)}">${impChange}</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">${dealer.after.engagements.toLocaleString()}</p>
+            <p class="text-xs text-slate-400">Engagements</p>
+            <p class="text-xs ${pctClass(dealer.before.engagements, dealer.after.engagements)}">${engChange}</p>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

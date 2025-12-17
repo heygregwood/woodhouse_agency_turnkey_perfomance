@@ -1,0 +1,9 @@
+{
+  "name": "dealer-reports",
+  "version": "1.0.0",
+  "description": "Ihrie Supply Dealer Performance Reports - Powered by Woodhouse",
+  "scripts": {
+    "dev": "npx serve public -l 3001",
+    "build": "echo 'Static site - no build needed'"
+  }
+}
