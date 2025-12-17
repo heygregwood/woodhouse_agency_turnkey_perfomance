@@ -32,7 +32,9 @@
   <!-- Header -->
   <header class="bg-slate-800/50 border-b border-slate-700">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="../" class="flex items-center gap-3">
+      <a href="../" class="flex items-center gap-6">
+        <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-12">
+        <span class="text-slate-600">×</span>
         <img src="../assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
       </a>
       <a href="../" class="text-slate-400 hover:text-white text-sm">← Back to Dashboard</a>
@@ -41,9 +43,12 @@
 
   <!-- Hero -->
   <section class="py-12 px-6 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2" id="dealer-name">Loading...</h1>
-      <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">-</span></p>
+    <div class="max-w-7xl mx-auto flex items-center gap-6">
+      <img id="dealer-logo" src="" alt="" class="h-20 w-auto max-w-[180px] object-contain bg-white rounded-xl p-3">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold mb-2" id="dealer-name">Loading...</h1>
+        <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">-</span></p>
+      </div>
     </div>
   </section>
 
@@ -157,6 +162,11 @@
         document.getElementById('dealer-name').textContent = data.profile;
         document.getElementById('partner-date').textContent = new Date(data.first_post).toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
         document.title = `${data.profile} | Woodhouse`;
+        
+        // Set dealer logo
+        const logoEl = document.getElementById('dealer-logo');
+        logoEl.src = `../assets/img/${slug}.png`;
+        logoEl.alt = data.profile;
         
         // Before/After stats
         document.getElementById('before-posts').textContent = data.before.posts.toLocaleString();

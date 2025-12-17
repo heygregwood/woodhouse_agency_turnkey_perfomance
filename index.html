@@ -41,7 +41,9 @@
   <!-- Header -->
   <header class="bg-slate-800/50 border-b border-slate-700">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-6">
+        <img src="assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-12">
+        <span class="text-slate-600">×</span>
         <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
       </div>
       <div class="text-sm text-slate-400">
@@ -100,8 +102,13 @@
   <!-- Footer -->
   <footer class="py-12 px-6 mt-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto text-center text-slate-500">
+      <div class="flex items-center justify-center gap-6 mb-4">
+        <img src="assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-10">
+        <span class="text-slate-600">×</span>
+        <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-8">
+      </div>
       <p>Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
-      <p class="text-sm mt-2">Data sourced from Sprout Social Profile Performance Reports</p>
+      <p class="text-sm mt-2">Data sourced from Sprout Social Post Performance Reports (Organic Only)</p>
     </div>
   </footer>
 
@@ -192,8 +199,13 @@
       card.href = `dealers/${dealer.slug}.html`;
       card.className = 'dealer-card bg-slate-800 rounded-xl p-6 border border-slate-700 block';
       card.innerHTML = `
-        <h3 class="font-semibold text-lg mb-1">${dealer.profile}</h3>
-        <p class="text-slate-400 text-sm mb-4">Partner since ${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</p>
+        <div class="flex items-center gap-4 mb-4">
+          <img src="assets/img/${dealer.slug}.png" alt="${dealer.profile}" class="h-12 w-auto max-w-[120px] object-contain bg-white rounded-lg p-2">
+          <div>
+            <h3 class="font-semibold text-lg leading-tight">${dealer.profile}</h3>
+            <p class="text-slate-400 text-sm">Partner since ${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</p>
+          </div>
+        </div>
         
         <div class="grid grid-cols-3 gap-4 text-center">
           <div>
