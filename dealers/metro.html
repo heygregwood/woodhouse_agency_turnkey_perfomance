@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kennedy's Heating & Air | Woodhouse</title>
+  <title>Dealer Performance | Woodhouse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,18 +13,11 @@
       --woodhouse-dark-blue: #1e78ab;
     }
     body { font-family: 'Work Sans', sans-serif; }
-    .gradient-text {
-      background: linear-gradient(135deg, #12ace2 0%, #1e78ab 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
     .stat-card {
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     }
     .positive { color: #22c55e; }
     .negative { color: #ef4444; }
-    .before-card { border-left: 4px solid #64748b; }
-    .after-card { border-left: 4px solid #22c55e; }
   </style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen">
@@ -42,128 +35,129 @@
   </header>
 
   <!-- Hero -->
-  <section class="py-12 px-6 border-b border-slate-800">
+  <section class="py-10 px-6 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex items-center gap-6">
       <img id="dealer-logo" src="" alt="" class="h-20 w-auto max-w-[180px] object-contain bg-white rounded-xl p-3">
       <div>
-        <h1 class="text-3xl md:text-4xl font-bold mb-2" id="dealer-name">Loading...</h1>
-        <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">-</span></p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-1" id="dealer-name">Loading...</h1>
+        <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">—</span></p>
       </div>
     </div>
   </section>
 
-  <!-- Before/After Comparison -->
-  <section class="py-12 px-6">
+  <!-- Performance Comparison -->
+  <section class="py-10 px-6">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">The Woodhouse Effect</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        
-        <!-- Before Card -->
-        <div class="before-card stat-card rounded-xl p-6">
-          <p class="text-slate-400 uppercase text-sm tracking-wider mb-4">Before Woodhouse</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-slate-400 text-sm">Published Posts</p>
-              <p class="text-3xl font-bold" id="before-posts">-</p>
-            </div>
-            <div>
-              <p class="text-slate-400 text-sm">Impressions</p>
-              <p class="text-3xl font-bold" id="before-impressions">-</p>
-            </div>
-            <div>
-              <p class="text-slate-400 text-sm">Engagements</p>
-              <p class="text-3xl font-bold" id="before-engagements">-</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- After Card -->
-        <div class="after-card stat-card rounded-xl p-6">
-          <p class="text-green-400 uppercase text-sm tracking-wider mb-4">With Woodhouse</p>
-          <div class="space-y-4">
-            <div class="flex items-end justify-between">
-              <div>
-                <p class="text-slate-400 text-sm">Published Posts</p>
-                <p class="text-3xl font-bold" id="after-posts">-</p>
-              </div>
-              <p class="text-green-400 text-lg font-semibold" id="posts-change">-</p>
-            </div>
-            <div class="flex items-end justify-between">
-              <div>
-                <p class="text-slate-400 text-sm">Impressions</p>
-                <p class="text-3xl font-bold" id="after-impressions">-</p>
-              </div>
-              <p class="text-green-400 text-lg font-semibold" id="impressions-change">-</p>
-            </div>
-            <div class="flex items-end justify-between">
-              <div>
-                <p class="text-slate-400 text-sm">Engagements</p>
-                <p class="text-3xl font-bold" id="after-engagements">-</p>
-              </div>
-              <p class="text-lg font-semibold" id="engagements-change">-</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Monthly Chart -->
-  <section class="py-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">Monthly Performance</h2>
-      <div class="bg-slate-800 rounded-xl p-6">
-        <canvas id="impressionsChart" height="300"></canvas>
+      <h2 class="text-2xl font-bold mb-6">Performance Comparison</h2>
+      
+      <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+        <table class="w-full">
+          <thead class="bg-slate-700/50">
+            <tr>
+              <th class="text-left px-6 py-4 text-sm font-semibold text-slate-300">Metric</th>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Before Woodhouse</th>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">With Woodhouse</th>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-700">
+              <td class="px-6 py-4 font-medium">Posts</td>
+              <td class="text-center px-6 py-4 text-slate-400" id="before-posts">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="after-posts">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="posts-change">—</td>
+            </tr>
+            <tr class="border-t border-slate-700">
+              <td class="px-6 py-4 font-medium">Impressions</td>
+              <td class="text-center px-6 py-4 text-slate-400" id="before-impressions">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="after-impressions">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="impressions-change">—</td>
+            </tr>
+            <tr class="border-t border-slate-700">
+              <td class="px-6 py-4 font-medium">Engagements</td>
+              <td class="text-center px-6 py-4 text-slate-400" id="before-engagements">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="after-engagements">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="engagements-change">—</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- Audience Growth -->
-  <section class="py-12 px-6">
+  <section class="py-10 px-6">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-2xl font-bold mb-6">Audience Growth</h2>
-      <div class="stat-card rounded-xl p-6">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-slate-400 text-sm">Starting Followers</p>
-            <p class="text-4xl font-bold" id="audience-start">-</p>
-          </div>
-          <div class="text-4xl text-[#12ace2]">→</div>
-          <div class="text-right">
-            <p class="text-slate-400 text-sm">Current Followers</p>
-            <p class="text-4xl font-bold" id="audience-end">-</p>
-          </div>
-          <div class="text-right">
-            <p class="text-slate-400 text-sm">Growth</p>
-            <p class="text-4xl font-bold positive" id="audience-change">-</p>
-          </div>
-        </div>
+      
+      <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+        <table class="w-full">
+          <thead class="bg-slate-700/50">
+            <tr>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Starting Followers</th>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Current Followers</th>
+              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Growth</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-700">
+              <td class="text-center px-6 py-4 text-slate-400" id="audience-start">—</td>
+              <td class="text-center px-6 py-4 font-semibold" id="audience-end">—</td>
+              <td class="text-center px-6 py-4 font-semibold positive" id="audience-change">—</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
+  <!-- Monthly Performance Chart -->
+  <section class="py-10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6">Monthly Performance</h2>
+      <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+        <canvas id="impressionsChart" height="300"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric Definitions -->
+  <section class="py-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-lg font-semibold mb-4 text-slate-300">Definitions</h3>
+      <ul class="text-sm text-slate-400 space-y-2">
+        <li><span class="text-slate-300 font-medium">Posts</span> — Content published to your social accounts</li>
+        <li><span class="text-slate-300 font-medium">Impressions</span> — How many times your posts were seen in feeds</li>
+        <li><span class="text-slate-300 font-medium">Engagements</span> — Likes, comments, shares, and clicks on your content</li>
+        <li><span class="text-slate-300 font-medium">Followers</span> — People who subscribe to see your updates</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="py-12 px-6 mt-12 border-t border-slate-800">
+  <footer class="py-12 px-6 mt-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto text-center text-slate-500">
+      <div class="flex items-center justify-center gap-6 mb-4">
+        <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-10">
+        <span class="text-slate-600">×</span>
+        <img src="../assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-8">
+      </div>
       <p>Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
     </div>
   </footer>
 
   <script>
-    // Get dealer slug from filename
     const slug = window.location.pathname.split('/').pop().replace('.html', '');
     
-    // Fetch dealer data
     fetch(`${slug}.json`)
       .then(res => res.json())
       .then(data => {
-        // Update header
+        // Header
         document.getElementById('dealer-name').textContent = data.profile;
         document.getElementById('partner-date').textContent = new Date(data.first_post).toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
         document.title = `${data.profile} | Woodhouse`;
         
-        // Set dealer logo
+        // Dealer logo
         const logoEl = document.getElementById('dealer-logo');
         logoEl.src = `../assets/img/${slug}.png`;
         logoEl.alt = data.profile;
@@ -177,26 +171,28 @@
         document.getElementById('after-impressions').textContent = data.after.impressions.toLocaleString();
         document.getElementById('after-engagements').textContent = data.after.engagements.toLocaleString();
         
-        // Calculate changes
         function pctChange(before, after) {
-          if (before === 0) return after > 0 ? '+∞' : '0%';
+          if (before === 0) return after > 0 ? '+∞' : '—';
           const change = ((after - before) / before) * 100;
           return change >= 0 ? `+${change.toFixed(0)}%` : `${change.toFixed(0)}%`;
         }
         
-        document.getElementById('posts-change').textContent = pctChange(data.before.posts, data.after.posts);
-        document.getElementById('impressions-change').textContent = pctChange(data.before.impressions, data.after.impressions);
+        function applyChange(elementId, before, after) {
+          const el = document.getElementById(elementId);
+          el.textContent = pctChange(before, after);
+          el.className = el.className + ' ' + (after >= before ? 'positive' : 'negative');
+        }
         
-        const engChange = document.getElementById('engagements-change');
-        engChange.textContent = pctChange(data.before.engagements, data.after.engagements);
-        engChange.className = data.after.engagements >= data.before.engagements ? 'text-lg font-semibold positive' : 'text-lg font-semibold negative';
+        applyChange('posts-change', data.before.posts, data.after.posts);
+        applyChange('impressions-change', data.before.impressions, data.after.impressions);
+        applyChange('engagements-change', data.before.engagements, data.after.engagements);
         
-        // Audience
-        document.getElementById('audience-start').textContent = data.audience_start.toLocaleString();
-        document.getElementById('audience-end').textContent = data.audience_end.toLocaleString();
-        document.getElementById('audience-change').textContent = pctChange(data.audience_start, data.audience_end);
+        // Audience (placeholder - not in current data)
+        document.getElementById('audience-start').textContent = '—';
+        document.getElementById('audience-end').textContent = '—';
+        document.getElementById('audience-change').textContent = '—';
         
-        // Chart - filter to months with activity (after first post mostly)
+        // Chart
         const chartData = data.monthly.filter(m => m.month >= data.first_post.substring(0, 7));
         const labels = chartData.map(m => m.month);
         const impressions = chartData.map(m => m.impressions);
@@ -230,32 +226,14 @@
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            interaction: {
-              intersect: false,
-              mode: 'index'
-            },
+            interaction: { intersect: false, mode: 'index' },
             plugins: {
-              legend: {
-                labels: { color: '#94a3b8' }
-              }
+              legend: { labels: { color: '#94a3b8' } }
             },
             scales: {
-              x: {
-                ticks: { color: '#64748b' },
-                grid: { color: '#1e293b' }
-              },
-              y: {
-                type: 'linear',
-                position: 'left',
-                ticks: { color: '#12ace2' },
-                grid: { color: '#1e293b' }
-              },
-              y1: {
-                type: 'linear',
-                position: 'right',
-                ticks: { color: '#22c55e' },
-                grid: { display: false }
-              }
+              x: { ticks: { color: '#64748b' }, grid: { color: '#1e293b' } },
+              y: { type: 'linear', position: 'left', ticks: { color: '#12ace2' }, grid: { color: '#1e293b' } },
+              y1: { type: 'linear', position: 'right', ticks: { color: '#22c55e' }, grid: { display: false } }
             }
           }
         });
