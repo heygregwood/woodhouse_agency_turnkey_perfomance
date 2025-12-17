@@ -151,11 +151,17 @@
   "before": {
     "posts": 1,
     "impressions": 12,
-    "engagements": 0
+    "engagements": 0,
+    "messages": 0,
+    "video_views": 0
   },
   "after": {
     "posts": 208,
     "impressions": 851,
-    "engagements": 16
-  }
+    "engagements": 16,
+    "messages": 12,
+    "video_views": 188
+  },
+  "audience_start": 19,
+  "audience_end": 24
 }

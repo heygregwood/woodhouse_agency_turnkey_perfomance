@@ -217,11 +217,17 @@
   "before": {
     "posts": 8,
     "impressions": 4825,
-    "engagements": 470
+    "engagements": 470,
+    "messages": 0,
+    "video_views": 0
   },
   "after": {
     "posts": 363,
     "impressions": 34272,
-    "engagements": 2794
-  }
+    "engagements": 2794,
+    "messages": 123,
+    "video_views": 7206
+  },
+  "audience_start": 66,
+  "audience_end": 228
 }

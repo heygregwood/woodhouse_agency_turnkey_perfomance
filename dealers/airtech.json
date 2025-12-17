@@ -3,285 +3,54 @@
   "slug": "airtech",
   "first_post": "2023-04-01",
   "monthly": [
-    {
-      "month": "2022-03",
-      "posts": 1,
-      "impressions": 26,
-      "engagements": 1
-    },
-    {
-      "month": "2022-04",
-      "posts": 3,
-      "impressions": 367,
-      "engagements": 10
-    },
-    {
-      "month": "2022-05",
-      "posts": 2,
-      "impressions": 59,
-      "engagements": 1
-    },
-    {
-      "month": "2022-06",
-      "posts": 1,
-      "impressions": 53,
-      "engagements": 1
-    },
-    {
-      "month": "2022-08",
-      "posts": 6,
-      "impressions": 165,
-      "engagements": 8
-    },
-    {
-      "month": "2022-09",
-      "posts": 5,
-      "impressions": 276,
-      "engagements": 11
-    },
-    {
-      "month": "2022-10",
-      "posts": 4,
-      "impressions": 392,
-      "engagements": 17
-    },
-    {
-      "month": "2022-11",
-      "posts": 3,
-      "impressions": 59,
-      "engagements": 4
-    },
-    {
-      "month": "2022-12",
-      "posts": 1,
-      "impressions": 109,
-      "engagements": 8
-    },
-    {
-      "month": "2023-01",
-      "posts": 6,
-      "impressions": 362,
-      "engagements": 17
-    },
-    {
-      "month": "2023-02",
-      "posts": 5,
-      "impressions": 247,
-      "engagements": 32
-    },
-    {
-      "month": "2023-03",
-      "posts": 7,
-      "impressions": 386,
-      "engagements": 21
-    },
-    {
-      "month": "2023-04",
-      "posts": 14,
-      "impressions": 452,
-      "engagements": 38
-    },
-    {
-      "month": "2023-05",
-      "posts": 10,
-      "impressions": 404,
-      "engagements": 23
-    },
-    {
-      "month": "2023-06",
-      "posts": 11,
-      "impressions": 210,
-      "engagements": 12
-    },
-    {
-      "month": "2023-07",
-      "posts": 10,
-      "impressions": 16,
-      "engagements": 6
-    },
-    {
-      "month": "2023-08",
-      "posts": 10,
-      "impressions": 101,
-      "engagements": 3
-    },
-    {
-      "month": "2023-09",
-      "posts": 10,
-      "impressions": 145,
-      "engagements": 9
-    },
-    {
-      "month": "2023-10",
-      "posts": 12,
-      "impressions": 9,
-      "engagements": 7
-    },
-    {
-      "month": "2023-11",
-      "posts": 10,
-      "impressions": 18,
-      "engagements": 4
-    },
-    {
-      "month": "2023-12",
-      "posts": 10,
-      "impressions": 23,
-      "engagements": 0
-    },
-    {
-      "month": "2024-01",
-      "posts": 12,
-      "impressions": 28,
-      "engagements": 2
-    },
-    {
-      "month": "2024-02",
-      "posts": 10,
-      "impressions": 109,
-      "engagements": 3
-    },
-    {
-      "month": "2024-03",
-      "posts": 10,
-      "impressions": 45,
-      "engagements": 0
-    },
-    {
-      "month": "2024-04",
-      "posts": 9,
-      "impressions": 147,
-      "engagements": 5
-    },
-    {
-      "month": "2024-05",
-      "posts": 8,
-      "impressions": 12,
-      "engagements": 1
-    },
-    {
-      "month": "2024-06",
-      "posts": 9,
-      "impressions": 11,
-      "engagements": 0
-    },
-    {
-      "month": "2024-07",
-      "posts": 11,
-      "impressions": 68,
-      "engagements": 3
-    },
-    {
-      "month": "2024-08",
-      "posts": 10,
-      "impressions": 8,
-      "engagements": 0
-    },
-    {
-      "month": "2024-09",
-      "posts": 9,
-      "impressions": 12,
-      "engagements": 6
-    },
-    {
-      "month": "2024-10",
-      "posts": 11,
-      "impressions": 18,
-      "engagements": 1
-    },
-    {
-      "month": "2024-11",
-      "posts": 6,
-      "impressions": 0,
-      "engagements": 0
-    },
-    {
-      "month": "2024-12",
-      "posts": 11,
-      "impressions": 0,
-      "engagements": 0
-    },
-    {
-      "month": "2025-01",
-      "posts": 9,
-      "impressions": 99,
-      "engagements": 0
-    },
-    {
-      "month": "2025-02",
-      "posts": 10,
-      "impressions": 92,
-      "engagements": 0
-    },
-    {
-      "month": "2025-03",
-      "posts": 10,
-      "impressions": 130,
-      "engagements": 0
-    },
-    {
-      "month": "2025-04",
-      "posts": 10,
-      "impressions": 191,
-      "engagements": 2
-    },
-    {
-      "month": "2025-05",
-      "posts": 10,
-      "impressions": 203,
-      "engagements": 3
-    },
-    {
-      "month": "2025-06",
-      "posts": 10,
-      "impressions": 150,
-      "engagements": 2
-    },
-    {
-      "month": "2025-07",
-      "posts": 8,
-      "impressions": 119,
-      "engagements": 2
-    },
-    {
-      "month": "2025-08",
-      "posts": 10,
-      "impressions": 121,
-      "engagements": 0
-    },
-    {
-      "month": "2025-09",
-      "posts": 10,
-      "impressions": 103,
-      "engagements": 0
-    },
-    {
-      "month": "2025-10",
-      "posts": 10,
-      "impressions": 80,
-      "engagements": 0
-    },
-    {
-      "month": "2025-11",
-      "posts": 10,
-      "impressions": 124,
-      "engagements": 1
-    },
-    {
-      "month": "2025-12",
-      "posts": 5,
-      "impressions": 23,
-      "engagements": 0
-    }
+    {"month": "2022-03", "posts": 1, "impressions": 26, "engagements": 1},
+    {"month": "2022-04", "posts": 3, "impressions": 367, "engagements": 10},
+    {"month": "2022-05", "posts": 2, "impressions": 59, "engagements": 1},
+    {"month": "2022-06", "posts": 1, "impressions": 53, "engagements": 1},
+    {"month": "2022-08", "posts": 6, "impressions": 165, "engagements": 8},
+    {"month": "2022-09", "posts": 5, "impressions": 276, "engagements": 11},
+    {"month": "2022-10", "posts": 4, "impressions": 392, "engagements": 17},
+    {"month": "2022-11", "posts": 3, "impressions": 59, "engagements": 4},
+    {"month": "2022-12", "posts": 1, "impressions": 109, "engagements": 8},
+    {"month": "2023-01", "posts": 6, "impressions": 362, "engagements": 17},
+    {"month": "2023-02", "posts": 5, "impressions": 247, "engagements": 32},
+    {"month": "2023-03", "posts": 7, "impressions": 386, "engagements": 21},
+    {"month": "2023-04", "posts": 14, "impressions": 452, "engagements": 38},
+    {"month": "2023-05", "posts": 10, "impressions": 404, "engagements": 23},
+    {"month": "2023-06", "posts": 11, "impressions": 210, "engagements": 12},
+    {"month": "2023-07", "posts": 10, "impressions": 16, "engagements": 6},
+    {"month": "2023-08", "posts": 10, "impressions": 101, "engagements": 3},
+    {"month": "2023-09", "posts": 10, "impressions": 145, "engagements": 9},
+    {"month": "2023-10", "posts": 12, "impressions": 9, "engagements": 7},
+    {"month": "2023-11", "posts": 10, "impressions": 18, "engagements": 4},
+    {"month": "2023-12", "posts": 10, "impressions": 23, "engagements": 0},
+    {"month": "2024-01", "posts": 12, "impressions": 28, "engagements": 2},
+    {"month": "2024-02", "posts": 10, "impressions": 109, "engagements": 3},
+    {"month": "2024-03", "posts": 10, "impressions": 45, "engagements": 0},
+    {"month": "2024-04", "posts": 9, "impressions": 147, "engagements": 5},
+    {"month": "2024-05", "posts": 8, "impressions": 12, "engagements": 1},
+    {"month": "2024-06", "posts": 9, "impressions": 11, "engagements": 0},
+    {"month": "2024-07", "posts": 11, "impressions": 68, "engagements": 3},
+    {"month": "2024-08", "posts": 10, "impressions": 8, "engagements": 0},
+    {"month": "2024-09", "posts": 9, "impressions": 12, "engagements": 6},
+    {"month": "2024-10", "posts": 11, "impressions": 18, "engagements": 1},
+    {"month": "2024-11", "posts": 6, "impressions": 0, "engagements": 0},
+    {"month": "2024-12", "posts": 11, "impressions": 0, "engagements": 0},
+    {"month": "2025-01", "posts": 9, "impressions": 99, "engagements": 0},
+    {"month": "2025-02", "posts": 10, "impressions": 92, "engagements": 0},
+    {"month": "2025-03", "posts": 10, "impressions": 130, "engagements": 0},
+    {"month": "2025-04", "posts": 10, "impressions": 191, "engagements": 2},
+    {"month": "2025-05", "posts": 10, "impressions": 203, "engagements": 3},
+    {"month": "2025-06", "posts": 10, "impressions": 150, "engagements": 2},
+    {"month": "2025-07", "posts": 8, "impressions": 119, "engagements": 2},
+    {"month": "2025-08", "posts": 10, "impressions": 121, "engagements": 0},
+    {"month": "2025-09", "posts": 10, "impressions": 103, "engagements": 0},
+    {"month": "2025-10", "posts": 10, "impressions": 80, "engagements": 0},
+    {"month": "2025-11", "posts": 10, "impressions": 124, "engagements": 1},
+    {"month": "2025-12", "posts": 5, "impressions": 23, "engagements": 0}
   ],
-  "before": {
-    "posts": 44,
-    "impressions": 2501,
-    "engagements": 131
-  },
-  "after": {
-    "posts": 325,
-    "impressions": 3271,
-    "engagements": 133
-  }
+  "before": {"posts": 44, "impressions": 2501, "engagements": 131, "messages": 1, "video_views": 19},
+  "after": {"posts": 325, "impressions": 3271, "engagements": 133, "messages": 49, "video_views": 2680},
+  "audience_start": 98,
+  "audience_end": 111
 }

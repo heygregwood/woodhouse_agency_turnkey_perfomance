@@ -1,7 +1,7 @@
 {
   "profile": "NC Heating & Air - Your HVAC Friend",
   "slug": "nc-heating",
-  "first_post": "2024-08-01",
+  "first_post": "2024-01-01",
   "monthly": [
     {
       "month": "2023-09",
@@ -139,11 +139,17 @@
   "before": {
     "posts": 17,
     "impressions": 6184,
-    "engagements": 649
+    "engagements": 649,
+    "messages": 1,
+    "video_views": 0
   },
   "after": {
     "posts": 162,
     "impressions": 3402,
-    "engagements": 73
-  }
+    "engagements": 73,
+    "messages": 42,
+    "video_views": 1574
+  },
+  "audience_start": 193,
+  "audience_end": 250
 }

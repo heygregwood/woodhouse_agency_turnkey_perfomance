@@ -16,10 +16,8 @@
 </head>
 <body class="bg-white min-h-screen py-8 px-4">
   
-  <!-- Main Container -->
   <div class="max-w-5xl mx-auto bg-slate-900 rounded-2xl shadow-2xl overflow-hidden">
     
-    <!-- Header -->
     <header class="bg-[#eeecec] px-8 py-5 flex items-center justify-between">
       <a href="../" class="flex items-center gap-5">
         <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-12">
@@ -29,7 +27,6 @@
       <a href="../" class="text-slate-600 hover:text-slate-900 text-sm font-medium">← Back to Dashboard</a>
     </header>
 
-    <!-- Hero -->
     <section class="py-8 px-8 border-b border-slate-800">
       <div class="flex items-center gap-5">
         <img id="dealer-logo" src="" alt="" class="h-16 w-auto max-w-[150px] object-contain bg-white rounded-xl p-3">
@@ -40,7 +37,13 @@
       </div>
     </section>
 
-    <!-- Performance Comparison -->
+    <!-- Elite-specific note (hidden by default) -->
+    <div id="elite-note" class="hidden px-8 pt-6">
+      <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-sm text-slate-400">
+        <p>Note: Pre-partnership metrics reflect significant community engagement following posts honoring a beloved team member in March 2025. We're grateful for the outpouring of support the Elite family received during that time.</p>
+      </div>
+    </div>
+
     <section class="py-8 px-8">
       <h2 class="text-xl font-bold mb-5 text-white">Performance Comparison</h2>
       
@@ -73,12 +76,23 @@
               <td class="text-center px-6 py-3 font-semibold" id="after-engagements">—</td>
               <td class="text-center px-6 py-3 font-semibold" id="engagements-change">—</td>
             </tr>
+            <tr class="border-t border-slate-700">
+              <td class="px-6 py-3 font-medium">Video Views</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="before-video-views">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="after-video-views">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="video-views-change">—</td>
+            </tr>
+            <tr class="border-t border-slate-700">
+              <td class="px-6 py-3 font-medium">Leads (Messages)</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="before-messages">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="after-messages">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="messages-change">—</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Audience Growth -->
     <section class="py-8 px-8">
       <h2 class="text-xl font-bold mb-5 text-white">Audience Growth</h2>
       
@@ -102,7 +116,6 @@
       </div>
     </section>
 
-    <!-- Monthly Performance Chart -->
     <section class="py-8 px-8">
       <h2 class="text-xl font-bold mb-5 text-white">Monthly Performance</h2>
       <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
@@ -110,18 +123,18 @@
       </div>
     </section>
 
-    <!-- Metric Definitions -->
     <section class="py-8 px-8">
       <h3 class="text-base font-semibold mb-3 text-slate-300">Definitions</h3>
       <ul class="text-sm text-slate-400 space-y-1.5">
         <li><span class="text-slate-300 font-medium">Posts</span> — Content published to your social accounts</li>
         <li><span class="text-slate-300 font-medium">Impressions</span> — How many times your posts were seen in feeds</li>
         <li><span class="text-slate-300 font-medium">Engagements</span> — Likes, comments, shares, and clicks on your content</li>
+        <li><span class="text-slate-300 font-medium">Video Views</span> — Number of times videos were watched</li>
+        <li><span class="text-slate-300 font-medium">Leads (Messages)</span> — Messages received through social media</li>
         <li><span class="text-slate-300 font-medium">Followers</span> — People who subscribe to see your updates</li>
       </ul>
     </section>
 
-    <!-- Footer -->
     <footer class="px-8 py-8 border-t border-slate-800 text-center">
       <div class="flex items-center justify-center gap-5 mb-3">
         <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-8">
@@ -135,6 +148,11 @@
   <script>
     const slug = window.location.pathname.split('/').pop().replace('.html', '');
     
+    // Show Elite note if needed
+    if (slug === 'elite-ac') {
+      document.getElementById('elite-note').classList.remove('hidden');
+    }
+    
     fetch(`${slug}.json`)
       .then(res => res.json())
       .then(data => {
@@ -146,6 +164,7 @@
         logoEl.src = `../assets/img/${slug}.png`;
         logoEl.alt = data.profile;
         
+        // Performance Comparison
         document.getElementById('before-posts').textContent = data.before.posts.toLocaleString();
         document.getElementById('before-impressions').textContent = data.before.impressions.toLocaleString();
         document.getElementById('before-engagements').textContent = data.before.engagements.toLocaleString();
@@ -153,6 +172,19 @@
         document.getElementById('after-posts').textContent = data.after.posts.toLocaleString();
         document.getElementById('after-impressions').textContent = data.after.impressions.toLocaleString();
         document.getElementById('after-engagements').textContent = data.after.engagements.toLocaleString();
+        
+        // Video Views & Messages
+        if (data.before.video_views !== undefined) {
+          document.getElementById('before-video-views').textContent = data.before.video_views.toLocaleString();
+          document.getElementById('after-video-views').textContent = data.after.video_views.toLocaleString();
+          applyChange('video-views-change', data.before.video_views, data.after.video_views);
+        }
+        
+        if (data.before.messages !== undefined) {
+          document.getElementById('before-messages').textContent = data.before.messages.toLocaleString();
+          document.getElementById('after-messages').textContent = data.after.messages.toLocaleString();
+          applyChange('messages-change', data.before.messages, data.after.messages);
+        }
         
         function pctChange(before, after) {
           if (before === 0) return after > 0 ? '+∞' : '—';
@@ -163,25 +195,30 @@
         function applyChange(elementId, before, after) {
           const el = document.getElementById(elementId);
           el.textContent = pctChange(before, after);
-          el.className = el.className + ' ' + (after >= before ? 'positive' : 'negative');
+          el.className = el.className.replace('positive', '').replace('negative', '').trim();
+          el.className += ' ' + (after >= before ? 'positive' : 'negative');
         }
         
         applyChange('posts-change', data.before.posts, data.after.posts);
         applyChange('impressions-change', data.before.impressions, data.after.impressions);
         applyChange('engagements-change', data.before.engagements, data.after.engagements);
         
-        document.getElementById('audience-start').textContent = '—';
-        document.getElementById('audience-end').textContent = '—';
-        document.getElementById('audience-change').textContent = '—';
+        // Audience Growth
+        if (data.audience_start) {
+          document.getElementById('audience-start').textContent = data.audience_start.toLocaleString();
+          document.getElementById('audience-end').textContent = data.audience_end.toLocaleString();
+          const audChange = pctChange(data.audience_start, data.audience_end);
+          const audEl = document.getElementById('audience-change');
+          audEl.textContent = audChange;
+          audEl.className = data.audience_end >= data.audience_start ? 'text-center px-6 py-3 font-semibold positive' : 'text-center px-6 py-3 font-semibold negative';
+        }
         
-        // Include some months before first post to show the "before" period
+        // Chart
         const firstPostMonth = data.first_post.substring(0, 7);
         const chartData = data.monthly;
         const labels = chartData.map(m => m.month);
         const impressions = chartData.map(m => m.impressions);
         const posts = chartData.map(m => m.posts);
-        
-        // Find index of first Woodhouse post month for annotation
         const startIndex = labels.indexOf(firstPostMonth);
         
         new Chart(document.getElementById('impressionsChart'), {
@@ -200,7 +237,7 @@
             plugins: { 
               legend: { labels: { color: '#94a3b8' } },
               annotation: {
-                annotations: {
+                annotations: startIndex >= 0 ? {
                   startLine: {
                     type: 'line',
                     xMin: startIndex,
@@ -217,7 +254,7 @@
                       font: { size: 11, weight: 'bold' }
                     }
                   }
-                }
+                } : {}
               }
             },
             scales: {
