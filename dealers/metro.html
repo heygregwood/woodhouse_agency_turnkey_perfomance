@@ -8,143 +8,128 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --woodhouse-blue: #12ace2;
-      --woodhouse-dark-blue: #1e78ab;
-    }
     body { font-family: 'Work Sans', sans-serif; }
-    .stat-card {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    }
     .positive { color: #22c55e; }
     .negative { color: #ef4444; }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen">
+<body class="bg-white min-h-screen py-8 px-4">
   
-  <!-- Header -->
-  <header class="bg-[#eeecec] border-b border-slate-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="../" class="flex items-center gap-6">
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-slate-900 rounded-2xl shadow-2xl overflow-hidden">
+    
+    <!-- Header -->
+    <header class="bg-[#eeecec] px-8 py-5 flex items-center justify-between">
+      <a href="../" class="flex items-center gap-5">
         <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-12">
-        <span class="text-slate-400">×</span>
+        <span class="text-slate-400 text-xl">×</span>
         <img src="../assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
       </a>
-      <a href="../" class="text-slate-600 hover:text-slate-900 text-sm">← Back to Dashboard</a>
-    </div>
-  </header>
+      <a href="../" class="text-slate-600 hover:text-slate-900 text-sm font-medium">← Back to Dashboard</a>
+    </header>
 
-  <!-- Hero -->
-  <section class="py-10 px-6 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex items-center gap-6">
-      <img id="dealer-logo" src="" alt="" class="h-20 w-auto max-w-[180px] object-contain bg-white rounded-xl p-3">
-      <div>
-        <h1 class="text-3xl md:text-4xl font-bold mb-1" id="dealer-name">Loading...</h1>
-        <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">—</span></p>
+    <!-- Hero -->
+    <section class="py-8 px-8 border-b border-slate-800">
+      <div class="flex items-center gap-5">
+        <img id="dealer-logo" src="" alt="" class="h-16 w-auto max-w-[150px] object-contain bg-white rounded-xl p-3">
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold text-white mb-1" id="dealer-name">Loading...</h1>
+          <p class="text-slate-400">Woodhouse Partner since <span id="partner-date">—</span></p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Performance Comparison -->
-  <section class="py-10 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">Performance Comparison</h2>
+    <!-- Performance Comparison -->
+    <section class="py-8 px-8">
+      <h2 class="text-xl font-bold mb-5 text-white">Performance Comparison</h2>
       
       <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
-        <table class="w-full">
-          <thead class="bg-slate-700/50">
+        <table class="w-full text-slate-100">
+          <thead class="bg-slate-700/50 text-sm">
             <tr>
-              <th class="text-left px-6 py-4 text-sm font-semibold text-slate-300">Metric</th>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Before Woodhouse</th>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">With Woodhouse</th>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Change</th>
+              <th class="text-left px-6 py-3 font-semibold text-slate-300">Metric</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">Before Woodhouse</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">With Woodhouse</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">Change</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-sm">
             <tr class="border-t border-slate-700">
-              <td class="px-6 py-4 font-medium">Posts</td>
-              <td class="text-center px-6 py-4 text-slate-400" id="before-posts">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="after-posts">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="posts-change">—</td>
+              <td class="px-6 py-3 font-medium">Posts</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="before-posts">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="after-posts">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="posts-change">—</td>
             </tr>
             <tr class="border-t border-slate-700">
-              <td class="px-6 py-4 font-medium">Impressions</td>
-              <td class="text-center px-6 py-4 text-slate-400" id="before-impressions">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="after-impressions">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="impressions-change">—</td>
+              <td class="px-6 py-3 font-medium">Impressions</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="before-impressions">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="after-impressions">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="impressions-change">—</td>
             </tr>
             <tr class="border-t border-slate-700">
-              <td class="px-6 py-4 font-medium">Engagements</td>
-              <td class="text-center px-6 py-4 text-slate-400" id="before-engagements">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="after-engagements">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="engagements-change">—</td>
+              <td class="px-6 py-3 font-medium">Engagements</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="before-engagements">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="after-engagements">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="engagements-change">—</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Audience Growth -->
-  <section class="py-10 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">Audience Growth</h2>
+    <!-- Audience Growth -->
+    <section class="py-8 px-8">
+      <h2 class="text-xl font-bold mb-5 text-white">Audience Growth</h2>
       
       <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
-        <table class="w-full">
-          <thead class="bg-slate-700/50">
+        <table class="w-full text-slate-100">
+          <thead class="bg-slate-700/50 text-sm">
             <tr>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Starting Followers</th>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Current Followers</th>
-              <th class="text-center px-6 py-4 text-sm font-semibold text-slate-300">Growth</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">Starting Followers</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">Current Followers</th>
+              <th class="text-center px-6 py-3 font-semibold text-slate-300">Growth</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-sm">
             <tr class="border-t border-slate-700">
-              <td class="text-center px-6 py-4 text-slate-400" id="audience-start">—</td>
-              <td class="text-center px-6 py-4 font-semibold" id="audience-end">—</td>
-              <td class="text-center px-6 py-4 font-semibold positive" id="audience-change">—</td>
+              <td class="text-center px-6 py-3 text-slate-400" id="audience-start">—</td>
+              <td class="text-center px-6 py-3 font-semibold" id="audience-end">—</td>
+              <td class="text-center px-6 py-3 font-semibold positive" id="audience-change">—</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Monthly Performance Chart -->
-  <section class="py-10 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">Monthly Performance</h2>
-      <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
-        <canvas id="impressionsChart" height="300"></canvas>
+    <!-- Monthly Performance Chart -->
+    <section class="py-8 px-8">
+      <h2 class="text-xl font-bold mb-5 text-white">Monthly Performance</h2>
+      <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
+        <canvas id="impressionsChart" height="280"></canvas>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Metric Definitions -->
-  <section class="py-8 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h3 class="text-lg font-semibold mb-4 text-slate-300">Definitions</h3>
-      <ul class="text-sm text-slate-400 space-y-2">
+    <!-- Metric Definitions -->
+    <section class="py-8 px-8">
+      <h3 class="text-base font-semibold mb-3 text-slate-300">Definitions</h3>
+      <ul class="text-sm text-slate-400 space-y-1.5">
         <li><span class="text-slate-300 font-medium">Posts</span> — Content published to your social accounts</li>
         <li><span class="text-slate-300 font-medium">Impressions</span> — How many times your posts were seen in feeds</li>
         <li><span class="text-slate-300 font-medium">Engagements</span> — Likes, comments, shares, and clicks on your content</li>
         <li><span class="text-slate-300 font-medium">Followers</span> — People who subscribe to see your updates</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-12 px-6 mt-8 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto text-center text-slate-500">
-      <div class="flex items-center justify-center gap-6 mb-4">
-        <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-10">
+    <!-- Footer -->
+    <footer class="px-8 py-8 border-t border-slate-800 text-center">
+      <div class="flex items-center justify-center gap-5 mb-3">
+        <img src="../assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-8">
         <span class="text-slate-600">×</span>
-        <img src="../assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-8">
+        <img src="../assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-7">
       </div>
-      <p>Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
-    </div>
-  </footer>
+      <p class="text-slate-500 text-sm">Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
+    </footer>
+  </div>
 
   <script>
     const slug = window.location.pathname.split('/').pop().replace('.html', '');
@@ -152,17 +137,14 @@
     fetch(`${slug}.json`)
       .then(res => res.json())
       .then(data => {
-        // Header
         document.getElementById('dealer-name').textContent = data.profile;
         document.getElementById('partner-date').textContent = new Date(data.first_post).toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
         document.title = `${data.profile} | Woodhouse`;
         
-        // Dealer logo
         const logoEl = document.getElementById('dealer-logo');
         logoEl.src = `../assets/img/${slug}.png`;
         logoEl.alt = data.profile;
         
-        // Before/After stats
         document.getElementById('before-posts').textContent = data.before.posts.toLocaleString();
         document.getElementById('before-impressions').textContent = data.before.impressions.toLocaleString();
         document.getElementById('before-engagements').textContent = data.before.engagements.toLocaleString();
@@ -187,12 +169,10 @@
         applyChange('impressions-change', data.before.impressions, data.after.impressions);
         applyChange('engagements-change', data.before.engagements, data.after.engagements);
         
-        // Audience (placeholder - not in current data)
         document.getElementById('audience-start').textContent = '—';
         document.getElementById('audience-end').textContent = '—';
         document.getElementById('audience-change').textContent = '—';
         
-        // Chart
         const chartData = data.monthly.filter(m => m.month >= data.first_post.substring(0, 7));
         const labels = chartData.map(m => m.month);
         const impressions = chartData.map(m => m.impressions);
@@ -203,33 +183,15 @@
           data: {
             labels: labels,
             datasets: [
-              {
-                label: 'Impressions',
-                data: impressions,
-                borderColor: '#12ace2',
-                backgroundColor: 'rgba(18, 172, 226, 0.1)',
-                fill: true,
-                tension: 0.3,
-                yAxisID: 'y'
-              },
-              {
-                label: 'Posts',
-                data: posts,
-                borderColor: '#22c55e',
-                backgroundColor: 'transparent',
-                borderDash: [5, 5],
-                tension: 0.3,
-                yAxisID: 'y1'
-              }
+              { label: 'Impressions', data: impressions, borderColor: '#12ace2', backgroundColor: 'rgba(18, 172, 226, 0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+              { label: 'Posts', data: posts, borderColor: '#22c55e', backgroundColor: 'transparent', borderDash: [5, 5], tension: 0.3, yAxisID: 'y1' }
             ]
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
             interaction: { intersect: false, mode: 'index' },
-            plugins: {
-              legend: { labels: { color: '#94a3b8' } }
-            },
+            plugins: { legend: { labels: { color: '#94a3b8' } } },
             scales: {
               x: { ticks: { color: '#64748b' }, grid: { color: '#1e293b' } },
               y: { type: 'linear', position: 'left', ticks: { color: '#12ace2' }, grid: { color: '#1e293b' } },

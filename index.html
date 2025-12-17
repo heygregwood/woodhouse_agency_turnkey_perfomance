@@ -8,187 +8,136 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --woodhouse-blue: #12ace2;
-      --woodhouse-dark-blue: #1e78ab;
-      --bg-dark: #0f172a;
-      --bg-card: #1e293b;
-    }
     body { font-family: 'Work Sans', sans-serif; }
-    .gradient-text {
-      background: linear-gradient(135deg, #12ace2 0%, #1e78ab 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
     .stat-card {
-      background: linear-gradient(135deg, var(--bg-card) 0%, #0f172a 100%);
-      border-left: 4px solid var(--woodhouse-blue);
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-left: 4px solid #12ace2;
     }
-    .dealer-row:hover {
-      background: rgba(18, 172, 226, 0.05);
-    }
+    .dealer-row:hover { background: rgba(18, 172, 226, 0.08); }
     .positive { color: #22c55e; }
     .negative { color: #ef4444; }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen">
+<body class="bg-white min-h-screen py-8 px-4">
   
-  <!-- Header -->
-  <header class="bg-[#eeecec] border-b border-slate-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-6">
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-slate-900 rounded-2xl shadow-2xl overflow-hidden">
+    
+    <!-- Header -->
+    <header class="bg-[#eeecec] px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-5">
         <img src="assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-12">
-        <span class="text-slate-400">×</span>
+        <span class="text-slate-400 text-xl">×</span>
         <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
       </div>
       <div class="text-sm text-slate-600">
         Data through December 15, 2025
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero -->
-  <section class="py-12 px-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">
+    <!-- Hero -->
+    <section class="py-10 px-8 text-center text-slate-100">
+      <h1 class="text-2xl md:text-3xl font-bold mb-3">
         Ihrie Supply Dealer Performance Report
       </h1>
-      <p class="text-lg text-slate-400 max-w-3xl mx-auto">
+      <p class="text-base text-slate-400 max-w-2xl mx-auto">
         Organic social media performance for HVAC dealers managed by Woodhouse Turnkey Social Media
       </p>
       <p class="text-sm text-slate-500 mt-2">Excludes paid/boosted impressions</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Summary Stats -->
-  <section class="py-8 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="stat-card rounded-xl p-6 text-center">
-          <p class="text-3xl font-bold">7</p>
+    <!-- Summary Stats -->
+    <section class="px-8 pb-10">
+      <div class="grid grid-cols-4 gap-4">
+        <div class="stat-card rounded-xl p-5 text-center">
+          <p class="text-3xl font-bold text-white">7</p>
           <p class="text-slate-400 text-sm mt-1">Dealers</p>
         </div>
-        <div class="stat-card rounded-xl p-6 text-center">
-          <p class="text-3xl font-bold" id="total-posts">-</p>
+        <div class="stat-card rounded-xl p-5 text-center">
+          <p class="text-3xl font-bold text-white" id="total-posts">-</p>
           <p class="text-slate-400 text-sm mt-1">Posts</p>
         </div>
-        <div class="stat-card rounded-xl p-6 text-center">
-          <p class="text-3xl font-bold" id="total-impressions">-</p>
+        <div class="stat-card rounded-xl p-5 text-center">
+          <p class="text-3xl font-bold text-white" id="total-impressions">-</p>
           <p class="text-slate-400 text-sm mt-1">Impressions</p>
         </div>
-        <div class="stat-card rounded-xl p-6 text-center">
-          <p class="text-3xl font-bold" id="total-engagements">-</p>
+        <div class="stat-card rounded-xl p-5 text-center">
+          <p class="text-3xl font-bold text-white" id="total-engagements">-</p>
           <p class="text-slate-400 text-sm mt-1">Engagements</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Dealer Performance Table -->
-  <section class="py-8 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">Dealer Performance Summary</h2>
+    <!-- Dealer Performance Table -->
+    <section class="px-8 pb-10">
+      <h2 class="text-xl font-bold mb-5 text-white">Dealer Performance Summary</h2>
       
       <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
-        <table class="w-full">
-          <thead class="bg-slate-700/50">
+        <table class="w-full text-slate-100">
+          <thead class="bg-slate-700/50 text-sm">
             <tr>
-              <th class="text-left px-6 py-4 text-sm font-semibold text-slate-300">Dealer</th>
-              <th class="text-center px-4 py-4 text-sm font-semibold text-slate-300">Partner Since</th>
-              <th class="text-center px-4 py-4 text-sm font-semibold text-slate-300">Posts</th>
-              <th class="text-center px-4 py-4 text-sm font-semibold text-slate-300">Impressions</th>
-              <th class="text-center px-4 py-4 text-sm font-semibold text-slate-300">Engagements</th>
-              <th class="text-center px-4 py-4 text-sm font-semibold text-slate-300">% Change</th>
+              <th class="text-left px-5 py-3 font-semibold text-slate-300">Dealer</th>
+              <th class="text-center px-4 py-3 font-semibold text-slate-300">Partner Since</th>
+              <th class="text-center px-4 py-3 font-semibold text-slate-300">Posts</th>
+              <th class="text-center px-4 py-3 font-semibold text-slate-300">Impressions</th>
+              <th class="text-center px-4 py-3 font-semibold text-slate-300">Engagements</th>
+              <th class="text-center px-4 py-3 font-semibold text-slate-300">% Change</th>
             </tr>
           </thead>
-          <tbody id="dealer-table">
-            <!-- Populated by JS -->
+          <tbody id="dealer-table" class="text-sm">
           </tbody>
         </table>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Metric Definitions -->
-  <section class="py-8 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h3 class="text-lg font-semibold mb-4 text-slate-300">Definitions</h3>
-      <ul class="text-sm text-slate-400 space-y-2">
+    <!-- Metric Definitions -->
+    <section class="px-8 pb-10">
+      <h3 class="text-base font-semibold mb-3 text-slate-300">Definitions</h3>
+      <ul class="text-sm text-slate-400 space-y-1.5">
         <li><span class="text-slate-300 font-medium">Posts</span> — Total content published to social media accounts</li>
         <li><span class="text-slate-300 font-medium">Impressions</span> — Number of times posts appeared in feeds (reach)</li>
         <li><span class="text-slate-300 font-medium">Engagements</span> — Total interactions including likes, comments, shares, and clicks</li>
         <li><span class="text-slate-300 font-medium">% Change</span> — Compares current Woodhouse-managed performance to pre-Woodhouse baseline</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-12 px-6 mt-8 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto text-center text-slate-500">
-      <div class="flex items-center justify-center gap-6 mb-4">
-        <img src="assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-10">
+    <!-- Footer -->
+    <footer class="px-8 py-8 border-t border-slate-800 text-center">
+      <div class="flex items-center justify-center gap-5 mb-3">
+        <img src="assets/img/ihrie-supply.png" alt="Ihrie Supply" class="h-8">
         <span class="text-slate-600">×</span>
-        <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-8">
+        <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-7">
       </div>
-      <p>Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
-      <p class="text-sm mt-2">Data sourced from Sprout Social Post Performance Reports (Organic Only)</p>
-    </div>
-  </footer>
+      <p class="text-slate-500 text-sm">Powered by <span class="text-[#12ace2]">Woodhouse Turnkey Social Media</span></p>
+      <p class="text-xs text-slate-600 mt-1">Data sourced from Sprout Social Post Performance Reports (Organic Only)</p>
+    </footer>
+  </div>
 
   <script>
     const dealers = [
-      {
-        "profile": "Airtech - Mechanical Services",
-        "slug": "airtech",
-        "first_post": "2023-04-01",
+      { "profile": "Airtech - Mechanical Services", "slug": "airtech", "first_post": "2023-04-01",
         "before": {"posts": 44, "impressions": 2501, "engagements": 131},
-        "after": {"posts": 325, "impressions": 3271, "engagements": 133}
-      },
-      {
-        "profile": "Scott Plumbing & Heating Co Inc",
-        "slug": "scott-plumbing",
-        "first_post": "2023-05-25",
+        "after": {"posts": 325, "impressions": 3271, "engagements": 133} },
+      { "profile": "Scott Plumbing & Heating Co Inc", "slug": "scott-plumbing", "first_post": "2023-05-25",
         "before": {"posts": 8, "impressions": 4825, "engagements": 470},
-        "after": {"posts": 363, "impressions": 34272, "engagements": 2794}
-      },
-      {
-        "profile": "Kennedy's Heating & Air Conditioning",
-        "slug": "kennedys",
-        "first_post": "2023-06-18",
+        "after": {"posts": 363, "impressions": 34272, "engagements": 2794} },
+      { "profile": "Kennedy's Heating & Air Conditioning", "slug": "kennedys", "first_post": "2023-06-18",
         "before": {"posts": 22, "impressions": 13296, "engagements": 1227},
-        "after": {"posts": 382, "impressions": 38909, "engagements": 3507}
-      },
-      {
-        "profile": "Metro Maintenance",
-        "slug": "metro",
-        "first_post": "2023-08-12",
+        "after": {"posts": 382, "impressions": 38909, "engagements": 3507} },
+      { "profile": "Metro Maintenance", "slug": "metro", "first_post": "2023-08-12",
         "before": {"posts": 0, "impressions": 0, "engagements": 0},
-        "after": {"posts": 490, "impressions": 21714, "engagements": 2794}
-      },
-      {
-        "profile": "Advanced Air Solutions Systems, Inc.",
-        "slug": "advanced-air",
-        "first_post": "2024-02-18",
+        "after": {"posts": 490, "impressions": 21714, "engagements": 2794} },
+      { "profile": "Advanced Air Solutions Systems, Inc.", "slug": "advanced-air", "first_post": "2024-02-18",
         "before": {"posts": 1, "impressions": 12, "engagements": 0},
-        "after": {"posts": 208, "impressions": 851, "engagements": 16}
-      },
-      {
-        "profile": "NC Heating & Air - Your HVAC Friend",
-        "slug": "nc-heating",
-        "first_post": "2024-08-01",
+        "after": {"posts": 208, "impressions": 851, "engagements": 16} },
+      { "profile": "NC Heating & Air - Your HVAC Friend", "slug": "nc-heating", "first_post": "2024-08-01",
         "before": {"posts": 17, "impressions": 6184, "engagements": 649},
-        "after": {"posts": 162, "impressions": 3402, "engagements": 73}
-      },
-      {
-        "profile": "Elite A/C Solutions",
-        "slug": "elite-ac",
-        "first_post": "2025-04-22",
+        "after": {"posts": 162, "impressions": 3402, "engagements": 73} },
+      { "profile": "Elite A/C Solutions", "slug": "elite-ac", "first_post": "2025-04-22",
         "before": {"posts": 71, "impressions": 57947, "engagements": 9105},
-        "after": {"posts": 119, "impressions": 31107, "engagements": 2812}
-      }
+        "after": {"posts": 119, "impressions": 31107, "engagements": 2812} }
     ];
 
-    // Calculate totals
     const totalPosts = dealers.reduce((sum, d) => sum + d.after.posts, 0);
     const totalImpressions = dealers.reduce((sum, d) => sum + d.after.impressions, 0);
     const totalEngagements = dealers.reduce((sum, d) => sum + d.after.engagements, 0);
@@ -208,26 +157,24 @@
       return after >= before ? 'positive' : 'negative';
     }
 
-    // Render dealer table
     const table = document.getElementById('dealer-table');
     dealers.forEach(dealer => {
       const impChange = pctChange(dealer.before.impressions, dealer.after.impressions);
-      
       const row = document.createElement('tr');
       row.className = 'dealer-row border-t border-slate-700 cursor-pointer';
       row.onclick = () => window.location.href = `dealers/${dealer.slug}.html`;
       row.innerHTML = `
-        <td class="px-6 py-4">
+        <td class="px-5 py-3">
           <div class="flex items-center gap-3">
-            <img src="assets/img/${dealer.slug}.png" alt="${dealer.profile}" class="h-10 w-auto max-w-[80px] object-contain bg-white rounded-lg p-1.5">
+            <img src="assets/img/${dealer.slug}.png" alt="${dealer.profile}" class="h-8 w-auto max-w-[70px] object-contain bg-white rounded p-1">
             <span class="font-medium">${dealer.profile}</span>
           </div>
         </td>
-        <td class="text-center px-4 py-4 text-slate-400">${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</td>
-        <td class="text-center px-4 py-4">${dealer.after.posts.toLocaleString()}</td>
-        <td class="text-center px-4 py-4">${dealer.after.impressions.toLocaleString()}</td>
-        <td class="text-center px-4 py-4">${dealer.after.engagements.toLocaleString()}</td>
-        <td class="text-center px-4 py-4 font-semibold ${pctClass(dealer.before.impressions, dealer.after.impressions)}">${impChange}</td>
+        <td class="text-center px-4 py-3 text-slate-400">${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</td>
+        <td class="text-center px-4 py-3">${dealer.after.posts.toLocaleString()}</td>
+        <td class="text-center px-4 py-3">${dealer.after.impressions.toLocaleString()}</td>
+        <td class="text-center px-4 py-3">${dealer.after.engagements.toLocaleString()}</td>
+        <td class="text-center px-4 py-3 font-semibold ${pctClass(dealer.before.impressions, dealer.after.impressions)}">${impChange}</td>
       `;
       table.appendChild(row);
     });
