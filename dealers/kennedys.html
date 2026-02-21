@@ -124,6 +124,13 @@
     </section>
 
     <section class="py-8 px-8">
+      <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
+        <h3 class="text-sm font-semibold text-[#f59e0b] mb-2">Note</h3>
+        <p class="text-sm text-slate-400">In late December 2025, Kennedy's began supplementing Woodhouse Turnkey Social Media posts with content specific to their business, including local weather updates and photos of completed installations. This dealer-created content drove a significant increase in impressions and engagement, demonstrating the value of pairing Turnkey content with localized posts.</p>
+      </div>
+    </section>
+
+    <section class="py-8 px-8">
       <h3 class="text-base font-semibold mb-3 text-slate-300">Definitions</h3>
       <ul class="text-sm text-slate-400 space-y-1.5">
         <li><span class="text-slate-300 font-medium">Posts</span> — Content published to your social accounts</li>
@@ -237,24 +244,49 @@
             plugins: { 
               legend: { labels: { color: '#94a3b8' } },
               annotation: {
-                annotations: startIndex >= 0 ? {
-                  startLine: {
-                    type: 'line',
-                    xMin: startIndex,
-                    xMax: startIndex,
-                    borderColor: '#f59e0b',
-                    borderWidth: 2,
-                    borderDash: [6, 6],
-                    label: {
-                      display: true,
-                      content: 'Woodhouse Start',
-                      position: 'start',
-                      backgroundColor: '#f59e0b',
-                      color: '#000',
-                      font: { size: 11, weight: 'bold' }
+                annotations: (() => {
+                  const a = {};
+                  if (startIndex >= 0) {
+                    a.startLine = {
+                      type: 'line',
+                      xMin: startIndex,
+                      xMax: startIndex,
+                      borderColor: '#f59e0b',
+                      borderWidth: 2,
+                      borderDash: [6, 6],
+                      label: {
+                        display: true,
+                        content: 'Woodhouse Start',
+                        position: 'start',
+                        backgroundColor: '#f59e0b',
+                        color: '#000',
+                        font: { size: 11, weight: 'bold' }
+                      }
+                    };
+                  }
+                  if (slug === 'kennedys') {
+                    const noteIndex = labels.indexOf('2025-12');
+                    if (noteIndex >= 0) {
+                      a.noteLine = {
+                        type: 'line',
+                        xMin: noteIndex,
+                        xMax: noteIndex,
+                        borderColor: '#f59e0b',
+                        borderWidth: 2,
+                        borderDash: [6, 6],
+                        label: {
+                          display: true,
+                          content: 'See Note',
+                          position: 'end',
+                          backgroundColor: '#f59e0b',
+                          color: '#000',
+                          font: { size: 11, weight: 'bold' }
+                        }
+                      };
                     }
                   }
-                } : {}
+                  return a;
+                })()
               }
             },
             scales: {

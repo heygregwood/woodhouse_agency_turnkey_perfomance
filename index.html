@@ -28,7 +28,7 @@
         <span class="text-slate-400 text-xl">+</span>
         <img src="assets/img/woodhouse_logo.png" alt="Woodhouse" class="h-10">
       </div>
-      <div class="text-sm text-slate-600">Data through December 15, 2025</div>
+      <div class="text-sm text-slate-600">Data through February 19, 2026</div>
     </header>
 
     <section class="py-10 px-8 text-center text-slate-100">
@@ -42,7 +42,7 @@
     <section class="px-8 pb-10">
       <div class="grid grid-cols-4 gap-4">
         <div class="stat-card rounded-xl p-5 text-center">
-          <p class="text-3xl font-bold text-white">7</p>
+          <p class="text-3xl font-bold text-white">6</p>
           <p class="text-slate-400 text-sm mt-1">Dealers</p>
         </div>
         <div class="stat-card rounded-xl p-5 text-center">
@@ -81,6 +81,13 @@
       </div>
     </section>
 
+    <section class="px-8 pb-4">
+      <ol class="text-xs text-slate-500 space-y-1 list-decimal list-inside">
+        <li>Metro Maintenance had no social media presence before partnering with Woodhouse.</li>
+        <li>Advanced Air Solutions had limited social media activity before Woodhouse (1 post, 12 impressions).</li>
+      </ol>
+    </section>
+
     <section class="px-8 pb-10">
       <h3 class="text-base font-semibold mb-3 text-slate-300">Definitions</h3>
       <ul class="text-sm text-slate-400 space-y-1.5">
@@ -90,7 +97,6 @@
         <li><span class="text-slate-300 font-medium">Leads</span> — Messages received through social media (potential customer inquiries)</li>
         <li><span class="text-slate-300 font-medium">% Change</span> — Compares current Woodhouse-managed performance to pre-Woodhouse baseline</li>
       </ul>
-      <p class="text-xs text-slate-500 mt-3">*Elite A/C pre-partnership metrics include memorial posts honoring Big John, whose passing sparked an extraordinary community response.</p>
     </section>
 
     <footer class="px-8 py-8 border-t border-slate-800 text-center">
@@ -108,25 +114,22 @@
     const dealers = [
       { "profile": "Airtech - Mechanical Services", "slug": "airtech", "first_post": "2023-04-01",
         "before": {"posts": 44, "impressions": 2501, "engagements": 131, "messages": 1},
-        "after": {"posts": 325, "impressions": 3271, "engagements": 133, "messages": 49} },
+        "after": {"posts": 346, "impressions": 4123, "engagements": 136, "messages": 68} },
       { "profile": "Scott Plumbing & Heating Co Inc", "slug": "scott-plumbing", "first_post": "2023-05-25",
         "before": {"posts": 8, "impressions": 4825, "engagements": 470, "messages": 0},
-        "after": {"posts": 363, "impressions": 34272, "engagements": 2794, "messages": 123} },
+        "after": {"posts": 390, "impressions": 37178, "engagements": 2923, "messages": 123} },
       { "profile": "Kennedy's Heating & Air Conditioning", "slug": "kennedys", "first_post": "2023-06-18",
         "before": {"posts": 22, "impressions": 13296, "engagements": 1227, "messages": 20},
-        "after": {"posts": 382, "impressions": 38909, "engagements": 3507, "messages": 311} },
+        "after": {"posts": 409, "impressions": 68402, "engagements": 5774, "messages": 334} },
       { "profile": "Metro Maintenance", "slug": "metro", "first_post": "2023-08-12",
         "before": {"posts": 0, "impressions": 0, "engagements": 0, "messages": 9},
-        "after": {"posts": 490, "impressions": 21714, "engagements": 2794, "messages": 297} },
+        "after": {"posts": 527, "impressions": 22978, "engagements": 2848, "messages": 304} },
       { "profile": "Advanced Air Solutions Systems, Inc.", "slug": "advanced-air", "first_post": "2024-02-18",
         "before": {"posts": 1, "impressions": 12, "engagements": 0, "messages": 0},
-        "after": {"posts": 208, "impressions": 851, "engagements": 16, "messages": 12} },
+        "after": {"posts": 228, "impressions": 1298, "engagements": 17, "messages": 14} },
       { "profile": "NC Heating & Air - Your HVAC Friend", "slug": "nc-heating", "first_post": "2024-01-01",
         "before": {"posts": 8, "impressions": 1827, "engagements": 65, "messages": 1},
-        "after": {"posts": 180, "impressions": 6138, "engagements": 248, "messages": 42} },
-      { "profile": "Elite A/C Solutions", "slug": "elite-ac", "first_post": "2025-04-22",
-        "before": {"posts": 71, "impressions": 57947, "engagements": 9105, "messages": 140},
-        "after": {"posts": 119, "impressions": 31107, "engagements": 2812, "messages": 95} }
+        "after": {"posts": 200, "impressions": 6820, "engagements": 249, "messages": 42} }
     ];
 
     const totalPosts = dealers.reduce((sum, d) => sum + d.after.posts, 0);
@@ -149,11 +152,12 @@
       return after >= before ? 'positive' : 'negative';
     }
 
+    const footnotes = { 'metro': '1', 'advanced-air': '2' };
     const table = document.getElementById('dealer-table');
     dealers.forEach(dealer => {
-      const isElite = dealer.slug === 'elite-ac';
-      const impChange = pctChange(dealer.before.impressions, dealer.after.impressions, isElite);
+      const impChange = pctChange(dealer.before.impressions, dealer.after.impressions);
       const leadsDisplay = dealer.after.messages !== null ? dealer.after.messages.toLocaleString() : '—';
+      const note = footnotes[dealer.slug] ? `<sup class="text-slate-500 ml-1">${footnotes[dealer.slug]}</sup>` : '';
       const row = document.createElement('tr');
       row.className = 'dealer-row border-t border-slate-700 cursor-pointer';
       row.onclick = () => window.location.href = `dealers/${dealer.slug}.html`;
@@ -161,7 +165,7 @@
         <td class="px-5 py-3">
           <div class="flex items-center gap-3">
             <img src="assets/img/${dealer.slug}.png" alt="${dealer.profile}" class="h-8 w-auto max-w-[70px] object-contain bg-white rounded p-1">
-            <span class="font-medium">${dealer.profile}</span>
+            <span class="font-medium">${dealer.profile}${note}</span>
           </div>
         </td>
         <td class="text-center px-3 py-3 text-slate-400">${new Date(dealer.first_post).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})}</td>

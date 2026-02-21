@@ -131,9 +131,21 @@
     },
     {
       "month": "2025-12",
-      "posts": 5,
-      "impressions": 66,
+      "posts": 9,
+      "impressions": 275,
       "engagements": 2
+    },
+    {
+      "month": "2026-01",
+      "posts": 10,
+      "impressions": 293,
+      "engagements": 1
+    },
+    {
+      "month": "2026-02",
+      "posts": 6,
+      "impressions": 180,
+      "engagements": 0
     }
   ],
   "before": {
@@ -144,12 +156,12 @@
     "video_views": 0
   },
   "after": {
-    "posts": 180,
-    "impressions": 6138,
-    "engagements": 248,
+    "posts": 200,
+    "impressions": 6820,
+    "engagements": 249,
     "messages": 42,
-    "video_views": 1574
+    "video_views": 1705
   },
   "audience_start": 193,
-  "audience_end": 250
+  "audience_end": 253
 }
