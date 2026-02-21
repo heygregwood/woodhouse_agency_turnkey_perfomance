@@ -48,10 +48,10 @@ PROFILE_MAP = {
     "Elite A/C Solutions": "elite-ac",
 }
 
-# Order dealers appear in index.html
+# Order dealers appear in index.html (Elite A/C removed Feb 2026)
 DEALER_ORDER = [
     "airtech", "scott-plumbing", "kennedys", "metro",
-    "advanced-air", "nc-heating", "elite-ac",
+    "advanced-air", "nc-heating",
 ]
 
 # ---------------------------------------------------------------------------
